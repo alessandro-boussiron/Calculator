@@ -7,15 +7,6 @@
 
 #include "calculator.h"
 
-const operations_t operations[] = {
-    {is_add, ADDITION},
-    {is_div, DIVISION},
-    {is_mul, MULTIPLY},
-    {is_sub, SUBSRACT},
-    {is_pow, POWER},
-    {NULL, UNDEFINED},
-};
-
 bool is_add(char *s)
 {
     if (!s)

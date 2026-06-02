@@ -36,10 +36,15 @@ typedef struct ast {
 } ast_t;
 
 typedef bool (*check_fnc)(char *);
+typedef double (*apply_fnc)(double, double);
 typedef struct operations {
-    check_fnc function;
+    check_fnc check;
+    apply_fnc apply;
     type_t type;
 } operations_t;
+
+extern const operations_t operations[];
+
 
 // Functions
 
