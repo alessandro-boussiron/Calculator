@@ -53,6 +53,16 @@ ast_t *init_ast(char **args);
 
 // Utils
 int count_args(char **args);
+void destroy_ast(ast_t *node);
+
+// Execute
+double execute_expression(ast_t *node);
+
+// Operations
+double add(double a, double b);
+double sub(double a, double b);
+double mul(double a, double b);
+double do_div(double a, double b);
 
 // Checks
 bool is_operator(char *s);

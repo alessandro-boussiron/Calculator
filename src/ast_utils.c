@@ -6,6 +6,16 @@
 */
 
 #include "calculator.h"
+#include <stdlib.h>
+
+void destroy_ast(ast_t *node)
+{
+    if (!node)
+        return;
+    destroy_ast(node->left);
+    destroy_ast(node->right);
+    free(node);
+}
 
 int count_args(char **args)
 {

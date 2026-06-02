@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-CC			=	epiclang
+CC			=	clang
 INCLUDE		=	-I./include/
 CFLAGS		=	-Wall -Wextra $(INCLUDE) -lm
 
@@ -13,6 +13,8 @@ SRCF		=	src/
 SRC			=	$(SRCF)checks.c		\
 				$(SRCF)ast.c		\
 				$(SRCF)ast_utils.c		\
+				$(SRCF)execute.c		\
+				$(SRCF)operation.c		\
 
 OBJ			=	$(SRC:.c=.o)
 

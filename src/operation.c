@@ -13,21 +13,25 @@ const operations_t operations[] = {
     {is_mul, mul, MULTIPLY},
     {is_sub, sub, SUBSRACT},
     {is_pow, pow, POWER},
-    {NULL, UNDEFINED},
+    {NULL, NULL, UNDEFINED},
 };
 
-static double add(double a, double b) {
+double add(double a, double b)
+{
     return a + b;
 }
 
-static double sub(double a, double b) {
+double sub(double a, double b)
+{
     return a - b;
 }
 
-static double mul(double a, double b) {
+double mul(double a, double b)
+{
     return a * b;
 }
 
-static double do_div(double a, double b) {
+double do_div(double a, double b)
+{
     return (b != 0) ? a / b : 0;
 }
