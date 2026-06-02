@@ -11,6 +11,8 @@ CFLAGS		=	-Wall -Wextra $(INCLUDE) -lm
 
 SRCF		=	src/
 SRC			=	$(SRCF)checks.c		\
+				$(SRCF)ast.c		\
+				$(SRCF)ast_utils.c		\
 
 OBJ			=	$(SRC:.c=.o)
 
